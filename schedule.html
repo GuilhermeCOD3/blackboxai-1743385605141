@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma Nutricional | NutriPlano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .meal-time {
+            position: relative;
+        }
+        .meal-time::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #4ade80, #3b82f6);
+        }
+        .meal-card {
+            transition: all 0.3s ease;
+        }
+        .meal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-utensils text-2xl text-green-600"></i>
+                    <span class="text-xl font-semibold text-gray-800">NutriPlano</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-green-600">Início</a>
+                    <a href="diet-plans.html" class="text-gray-600 hover:text-green-600">Planos Alimentares</a>
+                    <a href="schedule.html" class="text-green-600 font-medium">Cronograma</a>
+                    <a href="account.html" class="text-gray-600 hover:text-green-600">Minha Conta</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-green-600">Contato</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-green-400 to-blue-500 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Seu Cronograma Nutricional</h1>
+            <p class="text-xl mb-8">Organize suas refeições e acompanhe seu progresso</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Week Navigation -->
+        <div class="flex justify-between items-center mb-8">
+            <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l">
+                <i class="fas fa-chevron-left"></i> Semana Anterior
+            </button>
+            <h2 class="text-2xl font-bold text-center">Semana de 20/11 a 26/11</h2>
+            <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-r">
+                Próxima Semana <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Daily Schedule -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-semibold meal-time">Segunda-feira, 20/11</h3>
+                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">1500 kcal</span>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Breakfast -->
+                <div class="meal-card bg-gray-50 rounded-lg p-4 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-medium text-green-600">Café da Manhã</h4>
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">08:00</span>
+                    </div>
+                    <p class="text-gray-700 mb-2">Omelete + Pão integral + Suco verde</p>
+                    <div class="flex justify-between text-sm text-gray-500">
+                        <span>320 kcal</span>
+                        <span>25g proteína</span>
+                    </div>
+                </div>
+                
+                <!-- Morning Snack -->
+                <div class="meal-card bg-gray-50 rounded-lg p-4 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-medium text-green-600">Lanche da Manhã</h4>
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">11:00</span>
+                    </div>
+                    <p class="text-gray-700 mb-2">Mix de castanhas + Frutas secas</p>
+                    <div class="flex justify-between text-sm text-gray-500">
+                        <span>180 kcal</span>
+                        <span>5g proteína</span>
+                    </div>
+                </div>
+                
+                <!-- Lunch -->
+                <div class="meal-card bg-gray-50 rounded-lg p-4 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-medium text-green-600">Almoço</h4>
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">13:00</span>
+                    </div>
+                    <p class="text-gray-700 mb-2">Frango grelhado + Arroz integral + Salada</p>
+                    <div class="flex justify-between text-sm text-gray-500">
+                        <span>450 kcal</span>
+                        <span>35g proteína</span>
+                    </div>
+                </div>
+                
+                <!-- Afternoon Snack -->
+                <div class="meal-card bg-gray-50 rounded-lg p-4 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-medium text-green-600">Lanche da Tarde</h4>
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">16:00</span>
+                    </div>
+                    <p class="text-gray-700 mb-2">Iogurte natural + Granola + Mel</p>
+                    <div class="flex justify-between text-sm text-gray-500">
+                        <span>250 kcal</span>
+                        <span>10g proteína</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nutrition Progress -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Seu Progresso Nutricional</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Calories -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-semibold">Calorias</h3>
+                        <span class="text-sm bg-green-100 text-green-800 px-2 py-1 rounded">Meta: 1500 kcal</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4 mb-2">
+                        <div class="bg-green-600 h-4 rounded-full" style="width: 75%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-600">
+                        <span>Consumido: 1125 kcal</span>
+                        <span>Restante: 375 kcal</span>
+                    </div>
+                </div>
+                
+                <!-- Protein -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-semibold">Proteínas</h3>
+                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Meta: 75g</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4 mb-2">
+                        <div class="bg-blue-600 h-4 rounded-full" style="width: 60%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-600">
+                        <span>Consumido: 45g</span>
+                        <span>Restante: 30g</span>
+                    </div>
+                </div>
+                
+                <!-- Water -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-semibold">Água</h3>
+                        <span class="text-sm bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Meta: 2L</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-4 mb-2">
+                        <div class="bg-indigo-600 h-4 rounded-full" style="width: 40%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-600">
+                        <span>Consumido: 0.8L</span>
+                        <span>Restante: 1.2L</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Meal Button -->
+        <div class="fixed bottom-8 right-8">
+            <button class="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-lg transition transform hover:scale-110">
+                <i class="fas fa-plus text-2xl"></i>
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Sobre Nós</h3>
+                    <p class="text-gray-400">NutriPlano oferece soluções nutricionais completas para ajudar você a alcançar seus objetivos de saúde.</p>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Início</a></li>
+                        <li><a href="diet-plans.html" class="text-gray-400 hover:text-white">Planos</a></li>
+                        <li><a href="schedule.html" class="text-gray-400 hover:text-white">Cronograma</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contato</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-green-600"></i>
+                            <span class="text-gray-400">São Paulo, Brasil</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-green-600"></i>
+                            <span class="text-gray-400">(11) 9999-9999</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-green-600"></i>
+                            <span class="text-gray-400">contato@nutriplano.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Assine nossa newsletter para receber dicas nutricionais.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Seu email" class="px-4 py-2 w-full rounded-l focus:outline-none text-gray-800">
+                        <button class="bg-green-600 px-4 py-2 rounded-r hover:bg-green-700 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2023 NutriPlano. Todos os direitos reservados.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
